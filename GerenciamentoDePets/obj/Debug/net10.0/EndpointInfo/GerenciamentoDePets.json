@@ -5,8 +5,313 @@
     "description": "Aplicação para gerenciamento de contatos",
     "version": "v1"
   },
-  "paths": { },
+  "paths": {
+    "/api/Pet": {
+      "post": {
+        "tags": [
+          "Pet"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Nome": {
+                    "type": "string"
+                  },
+                  "Idade": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Peso": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Imagem": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "IdResponsavel": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "IdTipoPet": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "encoding": {
+                "Nome": {
+                  "style": "form"
+                },
+                "Idade": {
+                  "style": "form"
+                },
+                "Peso": {
+                  "style": "form"
+                },
+                "Imagem": {
+                  "style": "form"
+                },
+                "IdResponsavel": {
+                  "style": "form"
+                },
+                "IdTipoPet": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Pet"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pet/{id}": {
+      "get": {
+        "tags": [
+          "Pet"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Pet"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Nome": {
+                    "type": "string"
+                  },
+                  "Idade": {
+                    "type": "string"
+                  },
+                  "Peso": {
+                    "type": "string"
+                  },
+                  "IdResponsavel": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "IdTipoPet": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "Imagem": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "Nome": {
+                  "style": "form"
+                },
+                "Idade": {
+                  "style": "form"
+                },
+                "Peso": {
+                  "style": "form"
+                },
+                "IdResponsavel": {
+                  "style": "form"
+                },
+                "IdTipoPet": {
+                  "style": "form"
+                },
+                "Imagem": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Pet"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TipoPet": {
+      "get": {
+        "tags": [
+          "TipoPet"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TipoPet"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoPet"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoPet"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoPet"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TipoPet/{id}": {
+      "put": {
+        "tags": [
+          "TipoPet"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoPetDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoPetDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoPetDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
   "components": {
+    "schemas": {
+      "TipoPet": {
+        "type": "object",
+        "properties": {
+          "idTipoPet": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "especie": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoPetDTO": {
+        "type": "object",
+        "properties": {
+          "especie": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
     "securitySchemes": {
       "Bearer": {
         "type": "http",
@@ -19,6 +324,14 @@
   "security": [
     {
       "Bearer": [ ]
+    }
+  ],
+  "tags": [
+    {
+      "name": "Pet"
+    },
+    {
+      "name": "TipoPet"
     }
   ]
 }

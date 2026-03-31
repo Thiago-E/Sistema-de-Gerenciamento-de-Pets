@@ -58,8 +58,7 @@
               "RelativeToolTip": "DTO\\ResponsavelDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T12:30:40.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T12:30:40.181Z"
             },
             {
               "$type": "Document",
@@ -95,8 +94,7 @@
               "RelativeToolTip": "Models\\Pet.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T12:18:11.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T12:18:11.681Z"
             },
             {
               "$type": "Document",
@@ -145,15 +143,18 @@
               "RelativeToolTip": "Interfaces\\IPetRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T18:49:13.479Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T18:49:13.479Z"
             }
           ]
         },
         {
           "DockedHeight": 29,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 8,
@@ -166,10 +167,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-26T19:23:34.987Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }
