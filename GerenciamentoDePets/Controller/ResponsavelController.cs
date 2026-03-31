@@ -1,7 +1,5 @@
 ﻿using GerenciamentoDePets.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using GerenciamentoDePets.DTO;
 using GerenciamentoDePets.Models;
 
 namespace GerenciamentoDePets.Controller;
@@ -23,7 +21,7 @@ public class ResponsavelController : ControllerBase
     {
         try
         {
-            return Ok(_repository.Listar());
+            return Ok(_responsavelRepository.AtualizarResponsavel);
         }
         catch (Exception error)
         {
