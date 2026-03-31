@@ -5,12 +5,15 @@ namespace GerenciamentoDePets.Interfaces;
 public interface IPetRepository
 {
     void CadastrarPet(Pet pet);
+
     List<Pet> ListarPets();
-    List<Pet> BuscarPorId(Guid id);
+
+    // 🔥 CORRIGIDO: retorna um único objeto
+    Pet? BuscarPorId(Guid id);
+
+    // 🔥 CORRIGIDO: sem DTO aqui (controller que trata isso)
     void AtualizarPet(Guid id, Pet pet);
-    void DeletarPet(Guid IdPet);
 
-
-
-
+    void DeletarPet(Guid id);
+    void AtualizarPet(Pet petExistente);
 }
