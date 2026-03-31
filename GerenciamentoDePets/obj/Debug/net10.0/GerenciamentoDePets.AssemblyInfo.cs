@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GerenciamentoDePets")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b7c078c05705f6410a039830b6373f069fe8b43")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1c419a55b3d00c426417b6bb8b253f760d5ce49")]
+>>>>>>> 6b7558d2ab954ede6dd2587e83b19e698a8ac3ef
 [assembly: System.Reflection.AssemblyProductAttribute("GerenciamentoDePets")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GerenciamentoDePets")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,7 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\49631963870\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\49631963870\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\repositories\\responsavelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\53101823811\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\interfaces\\iresponsavelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|solutionrelative:interfaces\\iresponsavelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\44788197855\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\44788197855\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\repositories\\petrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|solutionrelative:repositories\\petrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 7b7c078c05705f6410a039830b6373f069fe8b43
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\44788197855\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\repositories\\responsavelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> 6b7558d2ab954ede6dd2587e83b19e698a8ac3ef
       "RelativeMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|solutionrelative:repositories\\responsavelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +36,22 @@
       "RelativeMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|solutionrelative:interfaces\\ipetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\49631963870\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\53101823811\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|solutionrelative:models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\53101823811\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\repositories\\tipopetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|solutionrelative:repositories\\tipopetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\53101823811\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\interfaces\\itipopetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\44788197855\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> 6b7558d2ab954ede6dd2587e83b19e698a8ac3ef
       "RelativeMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|solutionrelative:models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,7 +59,12 @@
       "RelativeMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|solutionrelative:repositories\\tipopetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\49631963870\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\interfaces\\itipopetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|c:\\users\\44788197855\\desktop\\sistema-de-gerenciamento-de-pets\\gerenciamentodepets\\interfaces\\itipopetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> 7b7c078c05705f6410a039830b6373f069fe8b43
+>>>>>>> 6b7558d2ab954ede6dd2587e83b19e698a8ac3ef
       "RelativeMoniker": "D:0:0:{119382F2-6CE1-D4E0-813C-634691AA35B2}|GerenciamentoDePets.csproj|solutionrelative:interfaces\\itipopetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -46,11 +83,57 @@
       "DocumentGroups": [
         {
           "DockedHeight": 221,
+<<<<<<< HEAD
           "SelectedChildIndex": 6,
+=======
+<<<<<<< HEAD
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pet.cs",
+              "DocumentMoniker": "C:\\Users\\53101823811\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Models\\Pet.cs",
+              "RelativeDocumentMoniker": "Models\\Pet.cs",
+              "ToolTip": "C:\\Users\\53101823811\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Models\\Pet.cs",
+              "RelativeToolTip": "Models\\Pet.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T12:18:11.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TipoPetRepository.cs",
+              "DocumentMoniker": "C:\\Users\\53101823811\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Repositories\\TipoPetRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\TipoPetRepository.cs",
+              "ToolTip": "C:\\Users\\53101823811\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Repositories\\TipoPetRepository.cs",
+              "RelativeToolTip": "Repositories\\TipoPetRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwDAAAAAkAAAAAAAAAA==",
+=======
+          "SelectedChildIndex": 1,
+>>>>>>> 6b7558d2ab954ede6dd2587e83b19e698a8ac3ef
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
+=======
+              "Title": "PetRepository.cs",
+              "DocumentMoniker": "C:\\Users\\44788197855\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Repositories\\PetRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\PetRepository.cs",
+              "ToolTip": "C:\\Users\\44788197855\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Repositories\\PetRepository.cs",
+              "RelativeToolTip": "Repositories\\PetRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wCsAAAAFAAAAAAAAAA==",
+>>>>>>> 7b7c078c05705f6410a039830b6373f069fe8b43
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T11:52:37.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+>>>>>>> 6b7558d2ab954ede6dd2587e83b19e698a8ac3ef
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\49631963870\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -63,6 +146,15 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 4,
+              "Title": "ITipoPetRepository.cs",
+              "DocumentMoniker": "C:\\Users\\53101823811\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Interfaces\\ITipoPetRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ITipoPetRepository.cs",
+              "ToolTip": "C:\\Users\\53101823811\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Interfaces\\ITipoPetRepository.cs",
+              "RelativeToolTip": "Interfaces\\ITipoPetRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+=======
               "DocumentIndex": 6,
               "Title": "ITipoPetRepository.cs",
               "DocumentMoniker": "C:\\Users\\49631963870\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Interfaces\\ITipoPetRepository.cs",
@@ -94,11 +186,21 @@
               "ToolTip": "C:\\Users\\49631963870\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Interfaces\\IPetRepository.cs",
               "RelativeToolTip": "Interfaces\\IPetRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+>>>>>>> 7b7c078c05705f6410a039830b6373f069fe8b43
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-31T11:52:37.355Z"
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 0,
+              "Title": "IResponsavelRepository.cs",
+              "DocumentMoniker": "C:\\Users\\53101823811\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Interfaces\\IResponsavelRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IResponsavelRepository.cs",
+              "ToolTip": "C:\\Users\\53101823811\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Interfaces\\IResponsavelRepository.cs",
+              "RelativeToolTip": "Interfaces\\IResponsavelRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+=======
               "DocumentIndex": 5,
               "Title": "TipoPetRepository.cs",
               "DocumentMoniker": "C:\\Users\\49631963870\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Repositories\\TipoPetRepository.cs",
@@ -106,6 +208,7 @@
               "ToolTip": "C:\\Users\\49631963870\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Repositories\\TipoPetRepository.cs",
               "RelativeToolTip": "Repositories\\TipoPetRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+>>>>>>> 7b7c078c05705f6410a039830b6373f069fe8b43
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-31T11:52:37.357Z"
             },
@@ -123,7 +226,23 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
+=======
+<<<<<<< HEAD
+              "DocumentIndex": 1,
+              "Title": "IPetRepository.cs",
+              "DocumentMoniker": "C:\\Users\\53101823811\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Interfaces\\IPetRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IPetRepository.cs",
+              "ToolTip": "C:\\Users\\53101823811\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Interfaces\\IPetRepository.cs",
+              "RelativeToolTip": "Interfaces\\IPetRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T18:49:13.479Z",
+              "EditorCaption": ""
+=======
+              "DocumentIndex": 2,
+>>>>>>> 6b7558d2ab954ede6dd2587e83b19e698a8ac3ef
               "Title": "ResponsavelRepository.cs",
               "DocumentMoniker": "C:\\Users\\49631963870\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\Repositories\\ResponsavelRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\ResponsavelRepository.cs",
@@ -131,6 +250,7 @@
               "RelativeToolTip": "Repositories\\ResponsavelRepository.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAYwC8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2026-03-31T11:52:37.339Z",
               "EditorCaption": ""
             },
@@ -145,6 +265,10 @@
               "ViewState": "AgIAAA8AAAAAAAAAAAA1wCsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-31T11:52:37.342Z"
+=======
+              "WhenOpened": "2026-03-31T11:52:37.339Z"
+>>>>>>> 7b7c078c05705f6410a039830b6373f069fe8b43
+>>>>>>> 6b7558d2ab954ede6dd2587e83b19e698a8ac3ef
             }
           ]
         },
@@ -154,7 +278,11 @@
           "Children": [
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 5,
+=======
               "DocumentIndex": 7,
+>>>>>>> 7b7c078c05705f6410a039830b6373f069fe8b43
               "Title": "GerenciamentoDePetsContext.cs",
               "DocumentMoniker": "C:\\Users\\49631963870\\Desktop\\Sistema-de-Gerenciamento-de-Pets\\GerenciamentoDePets\\BdContextGerenciamentoDePetsContext\\GerenciamentoDePetsContext.cs",
               "RelativeDocumentMoniker": "BdContextGerenciamentoDePetsContext\\GerenciamentoDePetsContext.cs",
