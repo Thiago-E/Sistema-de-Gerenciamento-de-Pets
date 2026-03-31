@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GerenciamentoDePets")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2538fcad36a73e9de2b327880a71ca43a984ec29")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6d23db557586ffe8929410d7ca27a8a8939b824")]
 [assembly: System.Reflection.AssemblyProductAttribute("GerenciamentoDePets")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GerenciamentoDePets")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
