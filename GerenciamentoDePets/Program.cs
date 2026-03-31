@@ -5,7 +5,7 @@ using Microsoft.OpenApi;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-//adiconar os controlerS
+//adiconar os controlers
 
 
 //adiciona o swagger
