@@ -1,7 +1,6 @@
 ﻿using GerenciamentoDePets.BdContextGerenciamentoDePetsContext;
 using GerenciamentoDePets.Interfaces;
 using GerenciamentoDePets.Models;
-using System.Net.WebSockets;
 
 namespace GerenciamentoDePets.Repositories;
 
@@ -13,44 +12,73 @@ public class PetRepository : IPetRepository
     {
         _context = context;
     }
-    public void AtualizarPet(Guid id, Pet pet)
-    {
-        var petExistente = _context.Pets.Find(id);
 
-        if (petExistente != null)
-        {
-            petExistente.Nome = String.IsNullOrWhiteSpace(pet.Nome) ? petExistente.Nome : pet.Nome;
-            petExistente.Peso = pet.Peso != 0 ? pet.Peso : petExistente.Peso;
-            petExistente.Idade = String.IsNullOrWhiteSpace(pet.Idade) ? petExistente.Idade : pet.Idade;
-            petExistente.Imagem = String.IsNullOrWhiteSpace(pet.Imagem) ? petExistente.Imagem : pet.Imagem;
-            petExistente.IdResponsavel = pet.IdResponsavel ?? petExistente.IdResponsavel;
-            _context.SaveChanges();
-        }
+    // 🔍 Buscar por ID (CORRIGIDO - agora retorna 1 objeto)
+    public Pet? BuscarPorId(Guid id)
+    {
+        return _context.Pets.FirstOrDefault(p => p.IdPet == id);
     }
 
-
-    public List<Pet> BuscarPorId(Guid id)
+    // 📋 Listar todos
+    public List<Pet> ListarPets()
     {
-        return _context.Pets.Where(p => p.IdPet == id).ToList();//ARRUMAR DEPOIS 
+        return _context.Pets.ToList();
     }
 
+    // ➕ Cadastrar
     public void CadastrarPet(Pet pet)
     {
         _context.Pets.Add(pet);
         _context.SaveChanges();
     }
 
-    public void DeletarPet(Guid IdPet)
+    // ✏️ Atualizar (CORRIGIDO)
+    public void AtualizarPet(Guid id, Pet pet)
     {
-        var pet = _context.Pets.Find(IdPet);
+        var petExistente = _context.Pets.Find(id);
+
+        if (petExistente != null)
+        {
+            petExistente.Nome = string.IsNullOrWhiteSpace(pet.Nome)
+                ? petExistente.Nome
+                : pet.Nome;
+
+            petExistente.Peso = pet.Peso != 0
+                ? pet.Peso
+                : petExistente.Peso;
+
+            petExistente.Idade = string.IsNullOrWhiteSpace(pet.Idade)
+                ? petExistente.Idade
+                : pet.Idade;
+
+            petExistente.Imagem = string.IsNullOrWhiteSpace(pet.Imagem)
+                ? petExistente.Imagem
+                : pet.Imagem;
+
+            petExistente.IdResponsavel = pet.IdResponsavel ?? petExistente.IdResponsavel;
+
+            petExistente.IdTipoPet = pet.IdTipoPet ?? petExistente.IdTipoPet;
+
+            _context.SaveChanges();
+        }
+    }
+
+    // ❌ Deletar
+    public void DeletarPet(Guid id)
+    {
+        var pet = _context.Pets.Find(id);
+
         if (pet != null)
         {
             _context.Pets.Remove(pet);
             _context.SaveChanges();
         }
     }
-    public List<Pet> ListarPets()
+
+   
+
+    public void AtualizarPet(Pet petExistente)
     {
-        return _context.Pets.ToList();
+        throw new NotImplementedException();
     }
 }

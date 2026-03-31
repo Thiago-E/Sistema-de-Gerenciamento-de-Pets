@@ -6,7 +6,7 @@ public class PetDTO
 
     public double Idade { get; set; }
 
-    public string Peso { get; set; }
+    public double Peso { get; set; }
 
     public IFormFile? Imagem { get; set; }
 
