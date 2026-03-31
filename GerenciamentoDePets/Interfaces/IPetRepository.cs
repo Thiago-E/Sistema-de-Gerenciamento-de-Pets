@@ -11,4 +11,6 @@ public interface IPetRepository
     void DeletarPet(Guid IdPet);
 
 
+
+
 }
