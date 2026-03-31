@@ -1,14 +1,27 @@
 using GerenciamentoDePets.BdContextGerenciamentoDePetsContext;
+using GerenciamentoDePets.Interfaces;
+using GerenciamentoDePets.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-
-//adiconar os controlers
 
 
-//adiciona o swagger
+builder.Services.AddControllers();
+
+builder.Services.AddDbContext<GerenciamentoDePetsContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+//injeção de dependecnia
+builder.Services.AddScoped<IPetRepository, PetRepository>();
+builder.Services.AddScoped<ITipoPetRepository, TipoPetRepository>();
+//builder.Services.AddScoped<IResponsavelRepository, ResponsavelRepository>(); adiconar depois
+
+
+
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -16,21 +29,9 @@ builder.Services.AddSwaggerGen(options =>
     {
         Version = "v1",
         Title = "API de Contatos",
-        Description = "Aplicação para gerenciamneto de contatos",
-        TermsOfService = new Uri("https://example.com/terms"),
-        Contact = new OpenApiContact
-        {
-            Name = "Francisco Hugo",
-            Url = new Uri("https://www.linkedin.com/in/francisco-hugo-ximenes-sales-308ab53a7/")
-        },
-        License = new OpenApiLicense
-        {
-            Name = "Exemplo de licensa",
-            Url = new Uri("https://example.com/license")
-        }
+        Description = "Aplicação para gerenciamento de contatos"
     });
 
-    //Usando a autentiação do swagger
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -38,33 +39,34 @@ builder.Services.AddSwaggerGen(options =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Insira o token JWT: "
+        Description = "Insira o token JWT"
     });
+
     options.AddSecurityRequirement(document => new OpenApiSecurityRequirement
     {
         [new OpenApiSecuritySchemeReference("Bearer", document)] = Array.Empty<string>().ToList()
     });
 });
 
-builder.Services.AddDbContext<GerenciamentoDePetsContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DeafultConnection")));
+
+var app = builder.Build();
 
 
 app.UseHttpsRedirection();
+
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
-
-    app.UseSwagger(options => { });
-    app.UseSwaggerUI(options =>
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
     {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-        options.RoutePrefix = string.Empty;
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        c.RoutePrefix = "";
     });
 }
-app.MapControllers();
-app.UseAuthentication();
 
-builder.Services.AddControllers();  
-builder.Services.AddOpenApi();
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.Run();
