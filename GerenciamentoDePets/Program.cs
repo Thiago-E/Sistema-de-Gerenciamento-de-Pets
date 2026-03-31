@@ -17,7 +17,8 @@ builder.Services.AddDbContext<GerenciamentoDePetsContext>(options =>
 //injeção de dependecnia
 builder.Services.AddScoped<IPetRepository, PetRepository>();
 builder.Services.AddScoped<ITipoPetRepository, TipoPetRepository>();
-//builder.Services.AddScoped<IResponsavelRepository, ResponsavelRepository>(); adiconar depois
+
+builder.Services.AddScoped<IResponsavelRepository, ResponsavelRepository>(); 
 
 
 

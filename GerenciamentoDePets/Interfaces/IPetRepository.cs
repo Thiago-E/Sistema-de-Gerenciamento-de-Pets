@@ -15,5 +15,4 @@ public interface IPetRepository
     void AtualizarPet(Guid id, Pet pet);
 
     void DeletarPet(Guid id);
-    void AtualizarPet(Pet petExistente);
 }

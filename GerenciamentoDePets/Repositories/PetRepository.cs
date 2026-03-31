@@ -13,26 +13,58 @@ public class PetRepository : IPetRepository
         _context = context;
     }
 
-    // 🔍 Buscar por ID (CORRIGIDO - agora retorna 1 objeto)
+    /// <summary>
+    /// Metodo que busca o pet pelo seu id
+    /// </summary>
+    /// <param name="id">Id do pet a ser buscado</param>
+    /// <returns>Pet buscado pelo id</returns>
     public Pet? BuscarPorId(Guid id)
     {
         return _context.Pets.FirstOrDefault(p => p.IdPet == id);
     }
 
-    // 📋 Listar todos
+    /// <summary>
+    /// Metodo que lista todos os pets
+    /// </summary>
+    /// <returns>Lista de todos os pets cadastrado</returns>
     public List<Pet> ListarPets()
     {
         return _context.Pets.ToList();
     }
 
-    // ➕ Cadastrar
+    /// <summary>
+    /// Metodo que cadastra um novo pet
+    /// </summary>
+    /// <param name="pet">Nome do pet cadastrado</param>
     public void CadastrarPet(Pet pet)
     {
         _context.Pets.Add(pet);
         _context.SaveChanges();
     }
 
-    // ✏️ Atualizar (CORRIGIDO)
+   
+
+    /// <summary>
+    /// Metodo que deleta pet pelo id
+    /// </summary>
+    /// <param name="id">Nome do pet a ser deletado pelo id</param>
+    public void DeletarPet(Guid id)
+    {
+        var pet = _context.Pets.Find(id);
+
+        if (pet != null)
+        {
+            _context.Pets.Remove(pet);
+            _context.SaveChanges();
+        }
+    }
+
+   
+    /// <summary>
+    /// Metodo que atualiza o pet pelo id
+    /// </summary>
+    /// <param name="id">Id do pet a ser atualizado</param>
+    /// <param name="pet">Nome do pet a ser atualizado</param>
     public void AtualizarPet(Guid id, Pet pet)
     {
         var petExistente = _context.Pets.Find(id);
@@ -61,24 +93,5 @@ public class PetRepository : IPetRepository
 
             _context.SaveChanges();
         }
-    }
-
-    // ❌ Deletar
-    public void DeletarPet(Guid id)
-    {
-        var pet = _context.Pets.Find(id);
-
-        if (pet != null)
-        {
-            _context.Pets.Remove(pet);
-            _context.SaveChanges();
-        }
-    }
-
-   
-
-    public void AtualizarPet(Pet petExistente)
-    {
-        throw new NotImplementedException();
     }
 }

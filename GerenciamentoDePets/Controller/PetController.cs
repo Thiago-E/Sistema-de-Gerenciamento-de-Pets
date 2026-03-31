@@ -17,6 +17,11 @@ public class PetController : ControllerBase
         _petRepository = petRepository;
     }
 
+    /// <summary>
+    /// Endpoint da API que cadastra um novo pet
+    /// </summary>
+    /// <param name="petDTO">Nome do novo pet a ser cadastrado</param>
+    /// <returns>Status code 201 e um pet cadastrado</returns>
     [HttpPost]
     public async Task<IActionResult> Post([FromForm] PetDTO petDTO)
     {
@@ -72,6 +77,10 @@ public class PetController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Endpoint da API que lista todos os pets
+    /// </summary>
+    /// <returns>Status code 200 e lista de pets</returns>
         [HttpGet]
         public IActionResult Listar()
         {
@@ -89,6 +98,11 @@ public class PetController : ControllerBase
          }
 
 
+    /// <summary>
+    /// Endpoint da API que busca um pet pelo seu id
+    /// </summary>
+    /// <param name="id">Id do pet a ser buscado</param>
+    /// <returns>Status code 200 e o pet especifico buscado</returns>
     [HttpGet("{id}")]
     public IActionResult BuscarPorId(Guid id)
     {
@@ -102,7 +116,12 @@ public class PetController : ControllerBase
         }
      }
 
-
+    /// <summary>
+    /// Endpoint da API que atualiza um pet especifico pelo id
+    /// </summary>
+    /// <param name="id">Id do pet a ser atualizado</param>
+    /// <param name="petDTO">Nome do pet a ser atualizado pelo id</param>
+    /// <returns>Status code 204 e o pet atualizado pelo seu id</returns>
     [HttpPut("{id}")]
     public async Task<IActionResult> AtualizarPet(Guid id, [FromForm] AtualizarPetDTO petDTO)
     {
@@ -143,13 +162,17 @@ public class PetController : ControllerBase
             petExistente.Imagem = nomeArquivo;
         }
 
-        _petRepository.AtualizarPet(petExistente);
+        _petRepository.AtualizarPet(id, petExistente);
 
         return NoContent();
     }
 
 
-
+    /// <summary>
+    /// Endpoint da API que deleta um pet pelo seu id
+    /// </summary>
+    /// <param name="id">Id do pet a ser deletado</param>
+    /// <returns>Status code 204 e o pet deletado</returns>
     [HttpDelete("{id}")]
       public IActionResult Deletar(Guid id)
       {

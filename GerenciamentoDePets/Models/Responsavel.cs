@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace GerenciamentoDePets.Models;
@@ -10,7 +11,9 @@ namespace GerenciamentoDePets.Models;
 public partial class Responsavel
 {
     [Key]
+    
     public Guid IdResponsavel { get; set; }
+
 
     [StringLength(100)]
     [Unicode(false)]
@@ -25,5 +28,7 @@ public partial class Responsavel
     public string Telefone { get; set; } = null!;
 
     [InverseProperty("IdResponsavelNavigation")]
+
+    [JsonIgnore]
     public virtual ICollection<Pet> Pets { get; set; } = new List<Pet>();
 }

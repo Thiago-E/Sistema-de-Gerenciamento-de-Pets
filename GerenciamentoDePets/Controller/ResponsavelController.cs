@@ -1,7 +1,5 @@
 ﻿using GerenciamentoDePets.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using GerenciamentoDePets.DTO;
 using GerenciamentoDePets.Models;
 
 namespace GerenciamentoDePets.Controller;
@@ -18,12 +16,16 @@ public class ResponsavelController : ControllerBase
     }
 
 
+    /// <summary>
+    /// Endpoint da API que busca listar os responsaveis dos pets
+    /// </summary>
+    /// <returns>Status code 200 e lista de responsaveis</returns>
     [HttpGet]
     public ActionResult Listar()
     {
         try
         {
-            return Ok(_responsavelRepository.AtualizarResponsavel);
+            return Ok(_responsavelRepository.Listar());
         }
         catch (Exception error)
         {
@@ -31,6 +33,11 @@ public class ResponsavelController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Endpoint da API que cadastra um responsavel
+    /// </summary>
+    /// <param name="responsavel">Nome do responsavel a ser cadastrado</param>
+    /// <returns>Status code 201 e responsavel novo cadastrado</returns>
     [HttpPost]
     public ActionResult CadastrarResponsavel(Responsavel responsavel)
     {
@@ -45,6 +52,13 @@ public class ResponsavelController : ControllerBase
             return BadRequest(error.Message);
         }
     }
+
+    /// <summary>
+    /// Endpoint da API que atualiza um responsavel de pet
+    /// </summary>
+    /// <param name="id">Id do responsavel a ser atualizado</param>
+    /// <param name="responsavel">Nome do responsavel a ser atualizado</param>
+    /// <returns>Status code 204 e responsavel do pet atualizado</returns>
     [HttpPut("{id}")]
     public ActionResult AtualizarResponsavel(Guid id, Responsavel responsavel)
     {

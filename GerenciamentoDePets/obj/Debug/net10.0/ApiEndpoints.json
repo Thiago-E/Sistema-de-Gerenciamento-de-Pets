@@ -129,6 +129,53 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GerenciamentoDePets.Controller.ResponsavelController",
+    "Method": "Listar",
+    "RelativePath": "api/Responsavel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerenciamentoDePets.Controller.ResponsavelController",
+    "Method": "CadastrarResponsavel",
+    "RelativePath": "api/Responsavel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "responsavel",
+        "Type": "GerenciamentoDePets.Models.Responsavel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GerenciamentoDePets.Controller.ResponsavelController",
+    "Method": "AtualizarResponsavel",
+    "RelativePath": "api/Responsavel/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "responsavel",
+        "Type": "GerenciamentoDePets.Models.Responsavel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GerenciamentoDePets.Controller.TipoPetController",
     "Method": "Listar",
     "RelativePath": "api/TipoPet",

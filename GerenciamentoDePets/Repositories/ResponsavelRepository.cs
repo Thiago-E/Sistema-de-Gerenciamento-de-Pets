@@ -1,63 +1,53 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using GerenciamentoDePets.DTO;
+﻿using GerenciamentoDePets.BdContextGerenciamentoDePetsContext;
 using GerenciamentoDePets.Interfaces;
 using GerenciamentoDePets.Models;
 
-namespace GerenciamentoDePets.Controller;
+namespace GerenciamentoDePets.Repositories;
 
-[Route("api/[controller]")]
-[ApiController]
-public class ResponsavelController : ControllerBase
+public class ResponsavelRepository : IResponsavelRepository
 {
-    private readonly IResponsavelRepository _repository;
+    private readonly GerenciamentoDePetsContext _context;
 
-    public ResponsavelController(IResponsavelRepository repository)
+    public ResponsavelRepository(GerenciamentoDePetsContext context)
     {
-        _repository = repository;
+        _context = context;
     }
 
-    // GET: api/responsavel
-    [HttpGet]
-    public ActionResult Get()
+    /// <summary>
+    /// Metodo que atualiza o responsavel pelo id
+    /// </summary>
+    /// <param name="id">Id do responsavel a ser atualizado</param>
+    /// <param name="responsavel">Nome do responsavel a ser atualizado</param>
+    public void AtualizarResponsavel(Guid id, Responsavel responsavel)
     {
-        try
+        var responsavelExistente = _context.Responsavels.Find(id);
+
+        if (responsavelExistente != null)
         {
-            return Ok(_repository.Listar());
+            responsavelExistente.Nome = responsavel.Nome;
+            responsavelExistente.Cpf = responsavel.Cpf;
+            responsavelExistente.Telefone = responsavel.Telefone;
+
+            _context.SaveChanges();
         }
-        catch (Exception error)
-        {
-         return BadRequest(error.Message);
-        }
     }
 
-    [HttpPost]
-    public ActionResult Post( ResponsavelDTO dto)
+    /// <summary>
+    /// Metodo que cadastra um novo responsavel
+    /// </summary>
+    /// <param name="responsavel">Nome do responsavel a ser cadastrado</param>
+    public void CadastrarResponsavel(Responsavel responsavel)
     {
-        var responsavel = new Responsavel
-        {
-            Nome = dto.Nome,
-            Cpf = dto.Cpf,
-            Telefone = dto.Telefone
-        };
-
-        _repository.CadastrarResponsavel(responsavel);
-
-        return Created("", dto);
+        _context.Responsavels.Add(responsavel);
+        _context.SaveChanges();
     }
 
-    
-    [HttpPut("{id}")]
-    public ActionResult Put(Guid id,  ResponsavelDTO dto)
+    /// <summary>
+    /// Metodo que lista os responsaveis
+    /// </summary>
+    /// <returns></returns>
+    public List<Responsavel> Listar()
     {
-        var responsavel = new Responsavel
-        {
-            Nome = dto.Nome,
-            Cpf = dto.Cpf,
-            Telefone = dto.Telefone
-        };
-
-        _repository.AtualizarResponsavel(id, responsavel);
-
-        return NoContent();
+        return _context.Responsavels.ToList();
     }
 }
